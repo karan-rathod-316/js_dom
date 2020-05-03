@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Accessing Elements in the DOM</title>
 
     <style>
-      html {
-        font-family: sans-serif;
-        color: #333;
-      }
-      body {
-        max-width: 500px;
-        margin: 0 auto;
-        padding: 0 15px;
-      }
-      div,
-      article {
-        padding: 10px;
-        margin: 5px;
-        border: 1px solid #dedede;
-      }
+        html {
+            font-family: sans-serif;
+            color: #333;
+        }
+        
+        body {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        div,
+        article {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #dedede;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <h1>Accessing Elements in the DOM</h1>
 
     <h2>ID (#demo)</h2>
@@ -46,7 +49,27 @@
     <div class="demo-query-all">Access me by query all (1)</div>
     <div class="demo-query-all">Access me by query all (2)</div>
     <script>
-      // your code goes here
+        let idDemo = document.getElementById("demo");
+        idDemo.style.border = "1px solid purple";
+
+        let classDemo = document.getElementsByClassName("demo");
+        for (let i of classDemo) {
+            i.style.border = "1px solid orange";
+        }
+
+        let tagArt = document.getElementsByTagName("article");
+        for (let i of tagArt) {
+            i.style.border = "1px solid blue";
+        }
+
+        let demoQuery = document.querySelector("#demo-query")
+        demoQuery.style.border = "1px solid black";
+
+        let demoQueryAll = document.querySelectorAll(".demo-query-all")
+        for (let i of demoQueryAll) {
+            i.style.border = "1px solid green"
+        }
     </script>
-  </body>
+</body>
+
 </html>
