@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>DOM Basics</title>
-  </head>
-  <body>
+</head>
+
+<body>
+
     <body>
-      <h1>Document Object Model</h1>
-    <script>
-      // your code goes here
-    </script>
-  </body>
+        <h1 class="header">Document Object Model</h1>
+        <div class="div"></div>
+        <script>
+            let div = document.querySelector(".div")
+            let para = document.createElement("p");
+            para.textContent = "hELLO WORLD"
+            div.append(para);
+            para.innerHTML = 'I love <strong> Javascript </strong>.';
+
+            var uList = document.createElement("ul");
+            var uListone = document.createElement("li");
+            var uListtwo = document.createElement("li");
+            var uListthree = document.createElement("li");
+            uListone.textContent = "Buy groceries";
+            uListtwo.textContent = "Feed the cat";
+            uListthree.textContent = "Do laundry";
+            div.appendChild(uList)
+            uList.appendChild(uListone);
+            uList.appendChild(uListtwo);
+            uList.appendChild(uListthree);
+
+            let newLi = document.createElement("li");
+            newLi.textContent = "Eat humans"
+            uList.appendChild(newLi)
+
+            uList.removeChild(uListtwo)
+        </script>
+    </body>
+
 </html>
