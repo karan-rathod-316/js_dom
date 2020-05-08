@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+
+
+        <h1>test</h1>
+    </div>
+    <script>
+        let body = document.querySelector(".main")
+        body.addEventListener('click', runEvent);
+
+        function runEvent(e) {
+            // console.log(`EVENT TYPE: ${e.type}`);
+
+            body.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+
+            document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
+        }
+    </script>
+</body>
+
+</html>

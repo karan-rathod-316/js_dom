@@ -1,11 +1,8 @@
-var quotes;
-
-// Write your code here
-
-
-
-quotes = [
-    {
+// function newQuote() {
+//     var randomNumber = math.floor(math.random * quotes.length);
+//     document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber]
+// }delete
+var quotes = [{
         "quoteAuthor": "Thomas Edison",
         "quoteText": "Genius is one percent inspiration and ninety-nine percent perspiration."
     },
@@ -314,3 +311,8 @@ quotes = [
         "quoteText": "Great talent finds happiness in execution."
     }
 ];
+
+let newQuotes = function() {
+    var randomNumber = Math.floor(Math.random() * (quotes.length))
+    document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber].quoteAuthor + " " + quotes[randomNumber].quoteText;
+}
